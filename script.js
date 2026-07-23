@@ -140,12 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Contact Form Handling ---
-    const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
+    
             
             // Simple validation UI feedback
             btn.innerText = 'Sending...';
