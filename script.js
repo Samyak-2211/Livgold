@@ -142,23 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Contact Form Handling ---
     
             
-            // Simple validation UI feedback
-            btn.innerText = 'Sending...';
-            btn.style.opacity = '0.7';
-            
-            setTimeout(() => {
-                btn.innerText = 'Message Sent Successfully!';
-                btn.style.background = '#4CAF50';
-                btn.style.color = '#fff';
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.background = '';
-                    btn.style.color = '';
-                    btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
-        });
-    }
+           backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 });
